@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+
+<head>
+  <!--  THINGS GOES HERE 0  -->
+  <!--  my title  -->
+  <title> CaliBoy : Observing </title>
+  <script src="scripts/jquery.js" type="text/javascript"></script>
+  <script src="scripts/functions.js" type="text/javascript"></script>
+  <script src="scripts/superfish.js" type="text/javascript"></script>
+  <script src="scripts/narrow.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="style/superfish.css" />
+  <link rel="stylesheet" type="text/css" href="style/narrow.css" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" /> 
+</head>
+
+<body class="" onload="CheckEmptyAndLoadList();">
+  
+  <div class="header" id="docheader">
+    <div class="content"> 
+      <div id="nav-logo"> <a href="home.html">Home</a> </div>
+      <a href="home.html" class="qtref"><span>CaliBoy Reference Documentation</span></a>
+      <div id="narrowsearch"> </div>
+      <div id="nav-topright"> </div>
+      <div id="shortCut">
+        <ul>
+          <li class="shortCut-topleft-inactive">1.0.0.20170209.a</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+
+    <div class="hd"> <span></span> </div>
+
+    <div class="bd group">
+
+      <div class="sidebar"> 
+        <div class="box first bottombar" id="introduce">
+          <h2 title="Introduce"><span></span> 概述 </h2>
+          <div  id="list001" class="list">
+            <ul id="ul001" >
+              <li class="defaultLink"><a href="about_caliboy.html">软件说明</a></li>
+              <li class="defaultLink"><a href="about_pickgridcorners.html">关于角点检测</a></li>
+              <li class="defaultLink"><a href="about_calibration.html">关于标定算法</a></li>
+            </ul> 
+          </div>
+        </div>
+        <div class="box bottombar" id="instruction">
+          <h2 title="Instruction"><span></span> 操作说明 </h2>
+          <div id="list002" class="list">
+            <ul id="ul002" >
+               <li class="defaultLink"><a href="loadimages.html#image_open">导入图像</a></li> 
+               <li class="defaultLink"><a href="loadimages.html#image_add">添加图像</a></li> 
+               <li class="defaultLink"><a href="pickcorners.html">角点检测</a></li> 
+               <li class="defaultLink"><a href="calibratecamera.html">标定相机</a></li>  
+               <li class="defaultLink"><a href="import_export.html">导入导出结果</a></li> 
+            </ul>  
+          </div>
+        </div>
+        <div class="box" id="viewandsettings">
+          <h2 title="View and Settings"><span></span> 查看与设置 </h2>
+          <div id="list003" class="list">
+            <ul id="ul003">
+              <li class="defaultLink"><a href="observe.html#gridimages">图像显示</a></li>
+              <li class="defaultLink"><a href="observe.html#calibresult">标定结果</a></li>
+              <li class="defaultLink"><a href="settings.html#setting_calib">标定设置</a></li>
+              <li class="defaultLink"><a href="settings.html#setting_import_export_result">导入导出设置</a></li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+
+        <div class="toolbar">
+          <div class="breadcrumb toolblock">
+            <ul>
+              <li class="first"><a href="home.html"> Home </a></li>
+              <!--  THINGS GOES HERE 1  -->
+              <!--  <li><a href="xxx.html"> xxx </a></li>  -->
+              <!--  <li> xxx </li>  -->
+              <li> 查看 </li>
+            </ul>
+          </div>
+          <div class="toolbuttons toolblock">
+            <ul>
+              <li id="smallA" class="t_button">A</li>
+              <li id="medA" class="t_button active">A</li>
+              <li id="bigA" class="t_button">A</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="content mainContent">
+          <!--  THINGS GOES HERE 2  -->
+          <!--  myself.html - description  -->
+          <div class="toc">
+            <h3><a name="toc">索引</a></h3>
+            <ul>
+              <li class="level1"><a href="#gridimages">图像显示查看</a></li>
+              <li class="level2"><a href="#image_view">图像显示</a></li>
+              <li class="level2"><a href="#image_info">图像信息</a></li>
+              <li class="level1"><a href="#calibresult">标定结果</a></li>
+              <li class="level2"><a href="#result_render">结果渲染</a></li>
+              <li class="level2"><a href="#result_err">标定偏差</a></li>
+              <li class="level2"><a href="#result_statics">标定结果偏差统计</a></li>
+            </ul>
+          </div>
+          <h1 class="title">查看</h1>
+          <span class="subtitle"></span>
+          <div class="descr"> <a name="details"></a>
+
+          <div class = "indexboxcont indexboxbar">
+            <p> 网格图像、图像信息及相关标定结果查看操作.</p>
+          </div>
+          <div class = "indexboxcont indexboxbar normallist">
+            <a name="gridimages"></a>
+            <h2>图像显示查看</h2> <p/>
+            <a name="image_view"></a> 
+            <h3>图像显示</h3> <p/>
+            <p> 工作区左上区域进行1:1显示导入图像;</p>
+            <p> 工作区右上区域对鼠标位置的图像区域进行放大显示;</p>
+            <p> 通过工作区左下区域的[<b>上一视图</b>]和[<b>上一视图</b>]按钮切换查看图像.</p>
+
+            <a name="image_info"></a> 
+            <h3>图像信息</h3> <p/>
+            <p> 工作区左下区域显示了总图像数及当前视图的序号和路径信息;</p>
+            <p> 工作区右上区域进行放大显示的同时也给出了当前鼠标在图像中的位置;</p>
+            <p> 信息栏下方区域显示了相机内部参数及相机相对位置信息.</p>
+          </div>
+
+          <div class = "indexboxcont indexboxbar normallist">
+            <a name="calibresult"></a>
+            <h2>标定结果</h2> <p/>
+
+            <p> 通过[<b>查看</b>]\[<b>标定结果...</b>]开启标定结果信息栏.</p>
+            <p class="leftAlign"><img src="images/ui/ui_resultMode.png" alt="" /></p>
+            <a name="result_render"></a>
+            <h3>结果渲染</h3> <p/>
+            <p> 通过<a href="https://www.opengl.org/">OpenGL</a>渲染显示相机相对棋盘的相对位置关系:</p>
+            <ul>
+              <li>通过按住鼠标左键拖拽更改渲染场景的观察视角;</li>
+              <li>通过滑动鼠标滚轮进行视图拉近与推远以实现缩放查看.</li>
+            </ul>
+            <p> 存在[<b>固定相机</b>]和[<b>固定棋盘</b>]两个渲染方式:</p>
+            <ul>
+              <li>固定相机 - 相机不动,通过摆动棋盘以改变成像视角;</li>
+              <li>固定棋盘 - 棋盘不动,通过移动相机以改变成像视角.</li>
+            </ul>
+            <p> 存在[<b>显示当前视图</b>]和[<b>显示所有视图</b>]两个选项:</p>
+            <ul>
+              <li>显示当前视图 - 仅绘制当前视图对应的相机或棋盘位置(呈红色);</li>
+              <li>显示所有视图 - 绘制所有可能视图对应的相机或棋盘位置,当前视图对应的相机或棋盘位置呈红色突出显示.</li>
+            </ul>
+
+
+            <a name="result_err"></a>
+            <h3>标定偏差</h3> <p/>
+            <p> 利用<a href="http://www.qcustomplot.com/">QCustomPlot</a>绘制的标定偏差图:</p>
+            <ul>
+              <li>通过按住鼠标左键拖拽进行移动观察;</li>
+              <li>通过滑动鼠标滚轮进行缩放查看;</li>
+              <li>通过单击进行选中以突出显示.</li>
+            </ul>
+            <p> 存在[<b>显示当前视图</b>]和[<b>显示所有视图</b>]两个选项:</p>
+            <ul>
+              <li>显示当前视图 - 仅绘制当前视图对应的标定偏差(呈红色);</li>
+              <li>显示所有视图 - 绘制所有可能视图对应的标定偏差,当前视图对应的标定偏差呈红色突出显示.</li>
+            </ul>
+            
+
+            <a name="result_statics"></a>
+            <h3>标定结果偏差统计</h3> <p/>
+            <p> 通过[<b>查看</b>]\[<b>标定偏差...</b>]查看标定偏差统计信息.</p>
+            <p> 统计信息包括每幅图像角点及所有图像角点个数及这些点在X方向、Y方向及欧氏距离的重投影偏差均值和标准差.</p>
+            <p class="leftAlign"><img src="images/ui/ui_errStatics.png" alt="" /></p>
+
+          </div>
+
+
+          </div>
+          
+        </div>
+      </div>
+
+    </div> 
+
+    <div class="ft"> <span></span> </div>
+
+  </div>
+  <script src="scripts/functions.js" type="text/javascript"></script>
+</body>
+</html>

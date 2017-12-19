@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+
+<head>
+  <!--  THINGS GOES HERE 0  -->
+  <!--  my title  -->
+  <title> CaliBoy : How to Pick Grid Corners </title>
+  <script src="scripts/jquery.js" type="text/javascript"></script>
+  <script src="scripts/functions.js" type="text/javascript"></script>
+  <script src="scripts/superfish.js" type="text/javascript"></script>
+  <script src="scripts/narrow.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="style/superfish.css" />
+  <link rel="stylesheet" type="text/css" href="style/narrow.css" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" /> 
+</head>
+
+<body class="" onload="CheckEmptyAndLoadList();">
+  
+  <div class="header" id="docheader">
+    <div class="content"> 
+      <div id="nav-logo"> <a href="home.html">Home</a> </div>
+      <a href="home.html" class="qtref"><span>CaliBoy Reference Documentation</span></a>
+      <div id="narrowsearch"> </div>
+      <div id="nav-topright"> </div>
+      <div id="shortCut">
+        <ul>
+          <li class="shortCut-topleft-inactive">1.0.0.20170209.a</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+
+    <div class="hd"> <span></span> </div>
+
+    <div class="bd group">
+
+      <div class="sidebar"> 
+        <div class="box first bottombar" id="introduce">
+          <h2 title="Introduce"><span></span> 概述 </h2>
+          <div  id="list001" class="list">
+            <ul id="ul001" >
+              <li class="defaultLink"><a href="about_caliboy.html">软件说明</a></li>
+              <li class="defaultLink"><a href="about_pickgridcorners.html">关于角点检测</a></li>
+              <li class="defaultLink"><a href="about_calibration.html">关于标定算法</a></li>
+            </ul> 
+          </div>
+        </div>
+        <div class="box bottombar" id="instruction">
+          <h2 title="Instruction"><span></span> 操作说明 </h2>
+          <div id="list002" class="list">
+            <ul id="ul002" >
+               <li class="defaultLink"><a href="loadimages.html#image_open">导入图像</a></li> 
+               <li class="defaultLink"><a href="loadimages.html#image_add">添加图像</a></li> 
+               <li class="defaultLink"><a href="pickcorners.html">角点检测</a></li> 
+               <li class="defaultLink"><a href="calibratecamera.html">标定相机</a></li>  
+               <li class="defaultLink"><a href="import_export.html">导入导出结果</a></li> 
+            </ul>  
+          </div>
+        </div>
+        <div class="box" id="viewandsettings">
+          <h2 title="View and Settings"><span></span> 查看与设置 </h2>
+          <div id="list003" class="list">
+            <ul id="ul003">
+              <li class="defaultLink"><a href="observe.html#gridimages">图像显示</a></li>
+              <li class="defaultLink"><a href="observe.html#calibresult">标定结果</a></li>
+              <li class="defaultLink"><a href="settings.html#setting_calib">标定设置</a></li>
+              <li class="defaultLink"><a href="settings.html#setting_import_export_result">导入导出设置</a></li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+
+        <div class="toolbar">
+          <div class="breadcrumb toolblock">
+            <ul>
+              <li class="first"><a href="home.html"> Home </a></li>
+              <!--  THINGS GOES HERE 1  -->
+              <!--  <li><a href="xxx.html"> xxx </a></li>  -->
+              <!--  <li> xxx </li>  -->
+              <li> 角点检测 </li>
+            </ul>
+          </div>
+          <div class="toolbuttons toolblock">
+            <ul>
+              <li id="smallA" class="t_button">A</li>
+              <li id="medA" class="t_button active">A</li>
+              <li id="bigA" class="t_button">A</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="content mainContent">
+          <!--  THINGS GOES HERE 2  -->
+          <!--  myself.html - description  -->
+          <p class="naviNextPrevious headerNavi">
+            <a class="prevPage" href="loadimages.html">导入图像</a>
+            <a class="nextPage" href="calibratecamera.html">标定相机</a>
+          </p> <p/>
+          <div class="toc">
+            <h3><a name="toc">索引</a></h3>
+            <ul>
+              <li class="level1"><a href="#corners_pick">拾取边界角点</a></li>
+              <li class="level1"><a href="#corners_adjust">调整角点</a></li>
+            </ul>
+          </div>
+          <h1 class="title">角点检测</h1>
+          <span class="subtitle"></span>
+          <div class="descr"> <a name="details"></a>
+
+          <div class = "indexboxcont indexboxbar">
+            <p> 半自动网格角点检测操作指导,检测角点用作相机标定输入.</p>
+            <p> 角点检测包括以下两步操作:</p>
+            <ul>
+              <li><a href="#corners_pick">拾取边界角点</a> - 手动选取图像中4个内部矩形区域边界角点以限定检测范围;</li>
+              <li><a href="#corners_adjust">调整角点</a> - 根据自动角点检测结果确定是否需要进行畸变调整.</li>
+            </ul>
+            <p><a href="about_pickgridcorners.html">关于角点检测</a>.</p>
+          </div>
+          <div class = "indexboxcont indexboxbar normallist">
+            <a name="corners_pick"></a> 
+            <h2>拾取边界角点</h2> <p/>
+            <p> 进入角点拾取模式后,鼠标变为十字形"+",同时工作区右下角将出现[<b>确定</b>]\[<b>取消</b>]按钮.</p>
+            <p> 通过单击鼠标左键拾取角点,单击鼠标右键以撤销上一个拾取的角点.拾取的角点实质为鼠标单击处的Harris角点检测结果.</p>
+            <p> 当4个角点拾取完成后,软件将自动检测区域内及边界上所有网格角点.默认第一个角点为O点,第二个角点为Y轴上点,最后一个角点为X轴上点,即顺时针拾取角点时则棋盘格坐标系Z轴朝向屏幕外,逆时针拾取角点时则棋盘格坐标系Z轴朝向屏幕内.</p>
+            <p class="leftAlign"><img src="images/ui/ui_picked_norm.png" alt="" /></p>
+            <p> 当4个角点拾取完的同时,工作区右下角将出现<b>畸变调整参数输入框</b>.</p>
+            <p class="leftAlign"><img src="images/ui/ui_picked_undist.png" alt="" /></p>
+            
+            <p/><p><a href="about_pickgridcorners.html">更多关于角点拾取</a>.</p>
+          </div>
+          <div class = "indexboxcont indexboxbar normallist">
+            <a name="corners_adjust"></a> 
+            <h2>调整角点</h2> <p/>
+            <p> 通过控制<b>畸变调整参数输入框</b>以调整畸变.</p>
+            <p> 畸变调整仅考虑简单二阶径向畸变模型,即仅考虑k1.参数范围为[-0.99,0.99].</p>
+            <p> 正k1系数为枕形畸变,负k1系数为桶形畸变/鱼眼畸变.</p>
+            <p class="leftAlign"><img src="images/ui/ui_picked_+0.8.png" alt="" /><img src="images/ui/ui_picked_-0.8.png" alt="" /></p>
+            <p> 单击[<b>确定</b>]按钮以接受此次角点检测,单击[<b>取消</b>]按钮以退出并取消此次角点检测.</p>
+            <p/><p><a href="about_pickgridcorners.html">更多关于调整角点</a>.</p>
+          </div>
+
+
+          </div>
+          <p class="naviNextPrevious footerNavi">
+            <a class="prevPage" href="loadimages.html">导入图像</a>
+            <a class="nextPage" href="calibratecamera.html">标定相机</a>
+          </p>
+
+        </div>
+      </div>
+
+    </div> 
+
+    <div class="ft"> <span></span> </div>
+
+  </div>
+  <script src="scripts/functions.js" type="text/javascript"></script>
+</body>
+</html>
