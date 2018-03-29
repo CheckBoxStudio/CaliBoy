@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+
+<head>
+  <!--  THINGS GOES HERE 0  -->
+  <!--  my title  -->
+  <title> CaliBoy : How to Export and Import Results </title>
+  <script src="scripts/jquery.js" type="text/javascript"></script>
+  <script src="scripts/functions.js" type="text/javascript"></script>
+  <script src="scripts/superfish.js" type="text/javascript"></script>
+  <script src="scripts/narrow.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="style/superfish.css" />
+  <link rel="stylesheet" type="text/css" href="style/narrow.css" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" /> 
+</head>
+
+<body class="" onload="CheckEmptyAndLoadList();">
+  
+  <div class="header" id="docheader">
+    <div class="content"> 
+      <div id="nav-logo"> <a href="home.html">Home</a> </div>
+      <a href="home.html" class="qtref"><span>CaliBoy Reference Documentation</span></a>
+      <div id="narrowsearch"> </div>
+      <div id="nav-topright"> </div>
+      <div id="shortCut">
+        <ul>
+          <li class="shortCut-topleft-inactive">1.0.0.20170209.a</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+
+    <div class="hd"> <span></span> </div>
+
+    <div class="bd group">
+
+      <div class="sidebar"> 
+        <div class="box first bottombar" id="introduce">
+          <h2 title="Introduce"><span></span> 概述 </h2>
+          <div  id="list001" class="list">
+            <ul id="ul001" >
+              <li class="defaultLink"><a href="about_caliboy.html">软件说明</a></li>
+              <li class="defaultLink"><a href="about_pickgridcorners.html">关于角点检测</a></li>
+              <li class="defaultLink"><a href="about_calibration.html">关于标定算法</a></li>
+            </ul> 
+          </div>
+        </div>
+        <div class="box bottombar" id="instruction">
+          <h2 title="Instruction"><span></span> 操作说明 </h2>
+          <div id="list002" class="list">
+            <ul id="ul002" >
+               <li class="defaultLink"><a href="loadimages.html#image_open">导入图像</a></li> 
+               <li class="defaultLink"><a href="loadimages.html#image_add">添加图像</a></li> 
+               <li class="defaultLink"><a href="pickcorners.html">角点检测</a></li> 
+               <li class="defaultLink"><a href="calibratecamera.html">标定相机</a></li>  
+               <li class="defaultLink"><a href="import_export.html">导入导出结果</a></li> 
+            </ul>  
+          </div>
+        </div>
+        <div class="box" id="viewandsettings">
+          <h2 title="View and Settings"><span></span> 查看与设置 </h2>
+          <div id="list003" class="list">
+            <ul id="ul003">
+              <li class="defaultLink"><a href="observe.html#gridimages">图像显示</a></li>
+              <li class="defaultLink"><a href="observe.html#calibresult">标定结果</a></li>
+              <li class="defaultLink"><a href="settings.html#setting_calib">标定设置</a></li>
+              <li class="defaultLink"><a href="settings.html#setting_import_export_result">导入导出设置</a></li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+
+        <div class="toolbar">
+          <div class="breadcrumb toolblock">
+            <ul>
+              <li class="first"><a href="home.html"> Home </a></li>
+              <!--  THINGS GOES HERE 1  -->
+              <!--  <li><a href="xxx.html"> xxx </a></li>  -->
+              <!--  <li> xxx </li>  -->
+              <li> 导入导出结果 </li>
+            </ul>
+          </div>
+          <div class="toolbuttons toolblock">
+            <ul>
+              <li id="smallA" class="t_button">A</li>
+              <li id="medA" class="t_button active">A</li>
+              <li id="bigA" class="t_button">A</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="content mainContent">
+          <!--  THINGS GOES HERE 2  -->
+          <!--  myself.html - description  -->
+          <p class="naviNextPrevious headerNavi">
+            <a class="prevPage" href="calibratecamera.html">标定相机</a>
+          </p> <p/>
+          <h1 class="title">导入导出结果</h1>
+          <span class="subtitle"></span>
+          <div class="descr"> <a name="details"></a>
+
+          <div class = "indexboxcont indexboxbar">
+            <p> 通过菜单栏[<b>导入\导出</b>]\[<b>导入标定结果...</b>]或工作区[<b>导入结果</b>]按钮进行已有标定结果导入;</p>
+            <p> 通过菜单栏[<b>导入\导出</b>]\[<b>导出标定结果...</b>]或工作区[<b>导出结果</b>]按钮导出标定结果.</p>
+
+            <p class="leftAlign"><img src="images/ui/ui_settingIO.png" alt="" /></p>
+            <p> 进行结果导入或导出时将弹出导入\导出设置对话框.</p>
+            <p> 导入\导出内容包括相机参数和标定结果(图像角点位置及相机相对位置),分别存放在<a href="#calibfile">相机文件</a>和<a href="#resultfile">标定结果文件</a>中. </p>
+            <p> 若相应的路径设定为空,则不导入\导出相应项;若标定结果中[<b>角点位置</b>]和[<b>相对位置</b>]均未被选中,则标定结果同样不被导入\导出.</p>
+          </div>
+          <div class = "indexboxcont indexboxbar normallist">
+            <a name="calibfile"></a>
+            <p><b>相机文件</b></p>
+            <ul>
+              <li> 默认文件格式<b>*.camera</b>;</li>
+              <li> 文件内容:
+              </li>
+            </ul>
+            <pre class="txt">
+#cx  #cy
+#fx  #fy
+#k1  #k2  #p1  #p2  #k3
+            </pre>
+              
+            <a name="resultfile"></a>
+            <p><b>标定结果文件</b></p>
+            <ul>
+              <li> 默认文件格式<b>*.calib</b>;</li>
+              <li> 文件内容:
+              </li>
+            </ul>
+            <pre class="txt">
+#文件路径
+#网格角点X方向个数(列数)  #网格角点Y方向个数(行数)
+#第1行第1列角点X坐标  #第1行第2列角点X坐标  ···  #第1行第X列角点X坐标
+#第2行第1列角点X坐标  #第2行第2列角点X坐标  ···  #第2行第X列角点X坐标
+        ·                    ·                            ·
+        ·                    ·                            ·
+        ·                    ·                            ·
+#第Y行第1列角点X坐标  #第Y行第2列角点X坐标  ···  #第Y行第X列角点X坐标
+#旋转量r_x  #旋转量r_y  #旋转量r_y
+#平移量t_x  #平移量t_y  #平移量t_y
+            </pre>
+          </div>
+
+          </div>
+          <p class="naviNextPrevious footerNavi">
+            <a class="prevPage" href="calibratecamera.html">标定相机</a>
+          </p>
+        </div>
+      </div>
+
+    </div> 
+
+    <div class="ft"> <span></span> </div>
+
+  </div>
+  <script src="scripts/functions.js" type="text/javascript"></script>
+</body>
+</html>
