@@ -1,5 +1,5 @@
 /* parseTxt.h
- * ½âÎöÎÄ±¾.
+ * Parse txt.
  */
 
 #ifndef PARSE_TXT_H
@@ -8,8 +8,9 @@
 #include <QString>
 #include <QStringList>
 
-bool parseTxt(const QString txtFile,
-			  QStringList &openFileList,
-			  QStringList &removeFileList);
+bool parseTxt(
+    const QString txtFile,
+    QStringList &openFileList,
+    QStringList &removeFileList);
 
 #endif // !PARSE_TXT_H

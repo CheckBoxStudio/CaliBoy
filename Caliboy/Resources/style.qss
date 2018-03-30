@@ -43,7 +43,7 @@ QMenu::icon{
 margin:0 7px 0 7px;}
 
 QMenu::right-arrow{
-image:url(./Resources/systemButtons/RArrow1.png);}	
+image:url(./Resources/systemButtons/RArrow1.png);}
 QMenu::right-arrow:selected:disabled{
 image:url(./Resources/systemButtons/RArrow1.png);}
 QMenu:right-arrow:selected{
@@ -85,8 +85,8 @@ QGraphicsView{
 padding:0;
 border:0;
 border-top:1px solid rgb(0,122,204);
-border-bottom:1px solid rgb(200,200,200);	
-margin:0 2px 0  0;	
+border-bottom:1px solid rgb(200,200,200);
+margin:0 2px 0  0;
 }
 
 QDockWidget{
@@ -217,7 +217,7 @@ QScrollBar:right-arrow:hover{
 image:url(./Resources/systemButtons/right2.png);}
 QScrollBar:right-arrow:pressed{
 background: white;}
-	
+
 QScrollBar:up-arrow{
 image:url(./Resources/systemButtons/up1.png);
 border:0;
@@ -227,7 +227,7 @@ QScrollBar:up-arrow:hover{
 image:url(./Resources/systemButtons/up2.png);}
 QScrollBar:up-arrow:pressed{
 background: white;}
-	
+
 QScrollBar:down-arrow{
 image:url(./Resources/systemButtons/down1.png);
 border:0;

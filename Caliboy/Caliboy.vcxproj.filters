@@ -36,8 +36,119 @@
     <Filter Include="Calib">
       <UniqueIdentifier>{3ad77611-e41d-4420-a56f-828a410784ee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="QCustomPlot">
+      <UniqueIdentifier>{a56aced2-1366-4818-835c-5f0e12f8f5b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{4b2948b1-a0c8-4294-b80b-cda38456719e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GeneratedFiles\qrc_mainwindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\camera.cpp">
+      <Filter>Calib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\chessboard.cpp">
+      <Filter>Calib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\estimate.cpp">
+      <Filter>Calib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\undistortion.cpp">
+      <Filter>Calib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QCustomPlot\qcustomplot.cpp">
+      <Filter>QCustomPlot</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qcustomplot.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qcustomplot.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\dlgpickview.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_dlgpickview.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_dlgpickview.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\dlgsettingcalib.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_dlgsettingcalib.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_dlgsettingcalib.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\dlgsettingIO.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_dlgsettingIO.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_dlgsettingIO.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\panelresult.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_panelresult.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_panelresult.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\panelruntime.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_panelruntime.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_panelruntime.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\qimgviewer.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qimgviewer.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qimgviewer.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\qimgzoomviewer.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qimgzoomviewer.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qimgzoomviewer.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\qmsg.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qmsg.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qmsg.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\scenerender.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_scenerender.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_scenerender.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -50,71 +161,8 @@
     <ClCompile Include="GeneratedFiles\Release\moc_mainwindow.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_mainwindow.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="qimgviewer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_qimgviewer.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_qimgviewer.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="qzoomview.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_qzoomview.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_qzoomview.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Calib\camera.cpp">
-      <Filter>Calib</Filter>
-    </ClCompile>
-    <ClCompile Include="qmsg.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_qmsg.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_qmsg.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_infopanel.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_infopanel.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="infopanel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="parseTxt.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Calib\chessboard.cpp">
-      <Filter>Calib</Filter>
-    </ClCompile>
-    <ClCompile Include="Calib\undistortion.cpp">
-      <Filter>Calib</Filter>
-    </ClCompile>
-    <ClCompile Include="Calib\estimate.cpp">
-      <Filter>Calib</Filter>
-    </ClCompile>
-    <ClCompile Include="uihelper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="dlgpickview.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_dlgpickview.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_dlgpickview.cpp">
-      <Filter>Generated Files\Release</Filter>
     </ClCompile>
     <ClCompile Include="threadCalib.cpp">
       <Filter>Source Files</Filter>
@@ -125,132 +173,84 @@
     <ClCompile Include="GeneratedFiles\Release\moc_threadCalib.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="calibresultviewer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_calibresultviewer.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_dlgcheckerror.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_calibresultviewer.cpp">
+    <ClCompile Include="GeneratedFiles\Release\moc_dlgcheckerror.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="QCustomPlot\qcustomplot.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ui\dlgcheckerror.cpp">
+      <Filter>UI</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_qcustomplot.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_qcustomplot.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="scenerender.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_scenerender.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_scenerender.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="dlgerrcheck.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_dlgerrcheck.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_dlgerrcheck.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="dlgsettingcalib.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_dlgsettingcalib.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_dlgsettingcalib.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="dlgsettingIO.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_dlgsettingIO.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_dlgsettingIO.cpp">
-      <Filter>Generated Files\Release</Filter>
+    <ClCompile Include="ui\girdcorner.cpp">
+      <Filter>UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="mainwindow.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="mainwindow.qrc">
       <Filter>Resource Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="qimgviewer.h">
-      <Filter>Header Files</Filter>
+    <CustomBuild Include="..\QCustomPlot\qcustomplot.h">
+      <Filter>QCustomPlot</Filter>
     </CustomBuild>
-    <CustomBuild Include="qzoomview.h">
-      <Filter>Header Files</Filter>
+    <CustomBuild Include="ui\dlgpickview.h">
+      <Filter>UI</Filter>
     </CustomBuild>
-    <CustomBuild Include="qmsg.h">
-      <Filter>Header Files</Filter>
+    <CustomBuild Include="ui\dlgsettingcalib.h">
+      <Filter>UI</Filter>
     </CustomBuild>
-    <CustomBuild Include="infopanel.h">
-      <Filter>Header Files</Filter>
+    <CustomBuild Include="ui\dlgsettingIO.h">
+      <Filter>UI</Filter>
     </CustomBuild>
-    <CustomBuild Include="uihelper.h">
-      <Filter>Header Files</Filter>
+    <CustomBuild Include="ui\panelresult.h">
+      <Filter>UI</Filter>
     </CustomBuild>
-    <CustomBuild Include="dlgpickview.h">
-      <Filter>Header Files</Filter>
+    <CustomBuild Include="ui\panelruntime.h">
+      <Filter>UI</Filter>
     </CustomBuild>
-    <CustomBuild Include="calibresultviewer.h">
-      <Filter>Header Files</Filter>
+    <CustomBuild Include="ui\qimgviewer.h">
+      <Filter>UI</Filter>
     </CustomBuild>
-    <CustomBuild Include="QCustomPlot\qcustomplot.h">
-      <Filter>Header Files</Filter>
+    <CustomBuild Include="ui\qimgzoomviewer.h">
+      <Filter>UI</Filter>
     </CustomBuild>
-    <CustomBuild Include="scenerender.h">
+    <CustomBuild Include="ui\qmsg.h">
+      <Filter>UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\scenerender.h">
+      <Filter>UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mainwindow.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="threadCalib.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="dlgerrcheck.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="dlgsettingcalib.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="dlgsettingIO.h">
-      <Filter>Header Files</Filter>
+    <CustomBuild Include="ui\dlgcheckerror.h">
+      <Filter>UI</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="uiconfig.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\src\camera.h">
+      <Filter>Calib</Filter>
     </ClInclude>
-    <ClInclude Include="qtChinese.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\src\chessboard.h">
+      <Filter>Calib</Filter>
     </ClInclude>
-    <ClInclude Include="Calib\camera.h">
+    <ClInclude Include="..\src\estimate.h">
+      <Filter>Calib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\undistortion.h">
       <Filter>Calib</Filter>
     </ClInclude>
     <ClInclude Include="parseTxt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Calib\chessboard.h">
-      <Filter>Calib</Filter>
+    <ClInclude Include="ui\uiconfig.h">
+      <Filter>UI</Filter>
     </ClInclude>
-    <ClInclude Include="Calib\undistortion.h">
-      <Filter>Calib</Filter>
+    <ClInclude Include="ui\girdcorner.h">
+      <Filter>UI</Filter>
     </ClInclude>
-    <ClInclude Include="Calib\estimate.h">
-      <Filter>Calib</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="version" />
   </ItemGroup>
 </Project>

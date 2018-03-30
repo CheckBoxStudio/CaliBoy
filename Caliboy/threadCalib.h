@@ -1,5 +1,5 @@
 /* threadCalib.h
- * 标定处理线程.
+ * Processing thread for calibration.
  */
 #ifndef QT_THREAD_CALIB_H
 #define QT_THREAD_CALIB_H
@@ -11,45 +11,46 @@
 using std::vector;
 
 enum TodoCode{
-	ToDo_Calib
+    ToDo_Calib
 };
 
 class cameraScene;
 
 class QThreadCalib : public QThread
 {
-	Q_OBJECT
+Q_OBJECT
 
 public:
-	QThreadCalib();
-	~QThreadCalib();
+    QThreadCalib();
+    ~QThreadCalib();
 
-	void setCalibParams(bool estPrincipalPoint, bool estFocalRatio, unsigned int estDistMode);
-	void calib(cameraScene *scene, vector<int> *list);
+    void setCalibParams(bool estPrincipalPoint, bool estFocalRatio, unsigned int estDistMode);
+    void calib(cameraScene *scene, vector<int> *list);
 protected:
-	void run();	
+    void run();
 private:
-	QMutex mutex;
-	TodoCode todoCode;
+    QMutex mutex;
+    TodoCode todoCode;
 
-	cameraScene *m_calibScene;
-	vector<int> m_calibList;
-	bool m_estPrincipalPoint;		/* 标定设置-固定主点位置[图像中心] */
-	bool m_estFocalRatio;			/* 标定设置-固定fx/fy[1] */
-	unsigned int m_estDistMode;		/* 标定设置-畸变参数设置
-									 * [0]: 无
-									 * [1]: k1
-									 * [2]: k1,k2
-									 * [3]: k1,k2,k3
-									 * [4]: k1,k2,p1,p2
-									 * [5]: k1,k2,p2,p2,k3
-									 */
+    cameraScene *m_calibScene;
+    vector<int> m_calibList;
+    bool m_estPrincipalPoint;       /* Whether to estmate the principal point. */
+    bool m_estFocalRatio;           /* Whether to estmate the focal ratio.
+                                       If not, the focal ratio will be set 1. */
+    unsigned int m_estDistMode;     /* Distoration model:
+                                     * [0]: None
+                                     * [1]: Only k1
+                                     * [2]: Only k1,k2
+                                     * [3]: Only k1,k2,k3
+                                     * [4]: Only k1,k2,p1,p2
+                                     * [5]: All k1,k2,p2,p2,k3
+                                     */
 private:
-	bool checkInput();
-	int calibFlag();
-	double doCalib_CVZhang();
+    bool checkInput();
+    int calibFlag();
+    double doCalib_CVZhang();
 signals:
-	void signalThreadEnd();
+    void signalThreadEnd();
 };
 
 #endif// !QT_THREAD_CALIB_H
