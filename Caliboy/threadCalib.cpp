@@ -21,8 +21,8 @@ void QThreadCalib::setCalibParams(
 {
     QMutexLocker locker(&mutex);
     m_estPrincipalPoint = estPrincipalPoint;
-    m_estFocalRatio= estFocalRatio;
-    m_estDistMode    = estDistMode;
+    m_estFocalRatio = estFocalRatio;
+    m_estDistMode = estDistMode;
     if (m_estDistMode>5)
         m_estDistMode = 5;
 }
@@ -107,15 +107,15 @@ int QThreadCalib::calibFlag()
  *  - Implemented by OpenCV, no optimization for inclination factor!
  * ----------------------------------
  * 1. Estimation of inner parameters
- *  - Set distortion parametrs to 0s;
+ *  - Set distortion parameters to 0s;
  *  - Use image center as principal point;
- *  - Utilize homography;
+ *  - Utilize homograph;
  *
  * 2. Estimation extrinsic parameters
  *  - Estimate Rotation matrix R by Rodrigues transform;
  *  - Optimize [R|t] by LevMarq;
  *
- * 3. Optimize by LevMarq by back prijection K[R_i|t_i];
+ * 3. Optimize by LevMarq by back projection K[R_i|t_i];
  * ----------------------------------
  * http://research.microsoft.com/en-us/um/people/zhang/Papers/TR98-71.pdf
  * http://www.opencv.org.cn/opencvdoc/2.3.2/html/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html?

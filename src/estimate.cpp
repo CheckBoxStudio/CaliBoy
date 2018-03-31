@@ -26,7 +26,7 @@ double estFocal_Rect(
     point11 << corners.at(2).x/f_est, corners.at(2).y/f_est, 1.0;
     point01 << corners.at(3).x/f_est, corners.at(3).y/f_est, 1.0;
 
-    // find the intersection by cross-product, include the anishing points
+    // find the intersection by cross-product, include the vanishing points
     Lines1 =  point00.cross(point10);
     Lines2 =  point01.cross(point11);
     hVanishingPoint = Lines1.cross(Lines2);
@@ -44,7 +44,7 @@ double estFocal_Rect(
     Vector3f hUnitDir = point10*r/vanishingLine.dot(point10)-point00;
     Vector3f vUnitDir = point01*r/vanishingLine.dot(point01)-point00;
 
-    // vertex of squre
+    // vertex of square
     double k = sqrtf(nX/nY);
     Vector3f pointH = point00 + hUnitDir/k; pointH /= pointH(2);
     Vector3f pointV = point00 + vUnitDir*k; pointV /= pointV(2);

@@ -181,16 +181,16 @@ void QImgZoomViewer::slotCornerPicked(QPointF &corner)
     m_GBoundCorners.push_back(cornerItem);
     if (n>=2) {
         QGraphicsLineItem *line = 
-        m_GScene->addLine(points[n-2].x()*m_scale,points[n-2].y()*m_scale,
-            corner.x()*m_scale,corner.y()*m_scale,
+            m_GScene->addLine(points[n-2].x()*m_scale,points[n-2].y()*m_scale,
+                corner.x()*m_scale,corner.y()*m_scale,
         QPen(QColor(C_CORNER_BOUNDLINE)));
         line->setZValue(-1);
         m_GBoundLines.push_back(line);
     }
     if (n == 4) {
         QGraphicsLineItem *line = 
-        m_GScene->addLine(points[0].x()*m_scale, points[0].y()*m_scale,
-            corner.x()*m_scale, corner.y()*m_scale,
+            m_GScene->addLine(points[0].x()*m_scale, points[0].y()*m_scale,
+                corner.x()*m_scale, corner.y()*m_scale,
         QPen(QColor(C_CORNER_BOUNDLINE)));
         m_GBoundLines.push_back(line);
         line->setZValue(-1);

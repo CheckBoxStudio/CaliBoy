@@ -38,7 +38,7 @@ bool parseTxt(
         for (int i=0; i<line.length(); ++i)
         {
             if (line[i] == '\r' ||
-            line[i] == '\n')
+                line[i] == '\n')
             line[i] = '\0';
         }
         QString qLine = line;

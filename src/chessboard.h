@@ -5,9 +5,9 @@
 #include <cv.h>
 
 /*
- * Find all grid point along the line between two points (the endpoints are included too).
+ * Find all grid points along the line (the endpoints are included too).
  * @param image: input image;
- * @param p1/p2: endpoinits of the line;
+ * @param p1/p2: endpoints of the line;
  * @param winSize: neighborhood size for searching.
  */
 int countSquares(
@@ -15,7 +15,7 @@ int countSquares(
     const cv::Point2f p1, const cv::Point2f p2, 
     const int winSize);
 /*
- * Find all grid point in a auadrilateral area.
+ * Find all grid points in a quadrilateral area.
  * @param boundCorners: the vertexes of the quadrilateral area;
  * @param gridCorners: [output] all the grid points;
  * @param nX/nY: [output] the column and row number of the grid points.

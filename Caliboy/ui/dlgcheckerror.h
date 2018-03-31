@@ -18,8 +18,8 @@ class DlgCheckError : public QDialog
 {
 Q_OBJECT
 private:
-    QTableWidget* m_TableWidget; 
-    QPushButton* m_butOk;
+    QTableWidget *m_TableWidget; 
+    QPushButton *m_butOk;
 
 public:
     DlgCheckError(const cameraScene *scene, QWidget *parent = 0);

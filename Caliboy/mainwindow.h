@@ -153,14 +153,14 @@ private slots:
 private:
     cameraScene m_calibScene;        /* Scene data. */
     OpState m_state;                 /* Operation state. */
-    int m_dispIndex;                 /* index of view in the scene. */
+    int m_dispIndex;                 /* Index of view in the scene. */
 
 
     QThreadCalib *m_calibThread;     /* Runtime thread. */
-    bool m_estPrincipalPoint;        /* Whether to estmate the principal point. */
-    bool m_estFocalRatio;            /* Whether to estmate the focal ratio.
+    bool m_estPrincipalPoint;        /* Whether to estimate the principal point. */
+    bool m_estFocalRatio;            /* Whether to estimate the focal ratio.
                                         If not, the focal ratio will be set 1. */
-    unsigned int m_estDistMode;      /* Distoration model:
+    unsigned int m_estDistMode;      /* Distortion model:
                                       * [0]: None
                                       * [1]: Only k1
                                       * [2]: Only k1,k2
@@ -169,8 +169,8 @@ private:
                                       * [5]: All k1,k2,p2,p2,k3
                                       */
     QString m_IO_camerafile;         /* Default path of camera file. */
-    QString m_IO_calibfile;          /* Default path of calib info file. */
-    bool m_IO_gridpts;               /* Whether to export/import the cordinates of grid points. */
+    QString m_IO_calibfile;          /* Default path of calibration info file. */
+    bool m_IO_gridpts;               /* Whether to export/import the coordinates of grid points. */
     bool m_IO_Rt;                    /* Whether to export/import the camera parameters. */
 };
 

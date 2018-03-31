@@ -111,8 +111,8 @@ void DlgPickView::checkAll(bool bOn)
 {
     for (int i=1; i<m_tw->rowCount(); ++i) {
         QCheckBox *checkBut = (QCheckBox*)m_tw->cellWidget(i,0);
-    if (checkBut->isEnabled())
-        checkBut->setChecked(bOn);
+        if (checkBut->isEnabled())
+            checkBut->setChecked(bOn);
     }
 }
 

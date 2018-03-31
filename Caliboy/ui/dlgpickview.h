@@ -20,11 +20,11 @@ class DlgPickView : public QDialog
 Q_OBJECT
 private:
     vector<int> m_PickList;
-    QTableWidget* m_tw; 
-    QLineEdit* m_sizex;
-    QLineEdit* m_sizey;
-    QPushButton* m_butclose;
-    QPushButton* m_butok;
+    QTableWidget *m_tw; 
+    QLineEdit *m_sizex;
+    QLineEdit *m_sizey;
+    QPushButton *m_butclose;
+    QPushButton *m_butok;
 
 public:
     DlgPickView(cameraScene *scene, QWidget *parent = 0);

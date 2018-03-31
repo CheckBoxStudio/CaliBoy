@@ -130,19 +130,21 @@ void cameraScene::clean()
     m_sizeX = 0;
     m_sizeY = 0;
 }
+
+int cameraScene::contains(const cameraView * newView)
+{
+    return contains(newView->getFileName());
+}
 int cameraScene::contains(const QString viewName)
 {
+    QString absName = QFileInfo(viewName).absoluteFilePath();
     for (int i = 0; i<m_views.size(); ++i) {
         if (QFileInfo(m_views.at(i)->getFileName()).absoluteFilePath() 
-            == QFileInfo(viewName).absoluteFilePath()) {
+            == absName) {
             return i;
         }
     }
     return -1;
-}
-int cameraScene::contains(const cameraView * newView)
-{
-    return contains(newView->getFileName());
 }
 
 void cameraScene::addView(cameraView * newView)
@@ -156,13 +158,13 @@ void cameraScene::addView(const QString newFile)
         m_views.push_back(new cameraView(newFile));
 }
 
-void cameraScene::removeView(const QString removedView)
+void cameraScene::removeView(cameraView * removedView)
 {
     int n = contains(removedView);
     if (n != -1)
         m_views.erase(m_views.begin() + n);
 }
-void cameraScene::removeView(cameraView * removedView)
+void cameraScene::removeView(const QString removedView)
 {
     int n = contains(removedView);
     if (n != -1)

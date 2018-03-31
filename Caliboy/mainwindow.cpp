@@ -258,11 +258,11 @@ void mainwindow::createPanels()
     hLayout2->addWidget(m_butOk);
     hLayout2->addWidget(m_butNo);
     QFrame* line1 = new QFrame(this);
-        line1->setFrameShape(QFrame::HLine);
-        line1->setFrameShadow(QFrame::Sunken);
+    line1->setFrameShape(QFrame::HLine);
+    line1->setFrameShadow(QFrame::Sunken);
     QFrame* line2 = new QFrame(this);
-        line2->setFrameShape(QFrame::HLine);
-        line2->setFrameShadow(QFrame::Sunken);
+    line2->setFrameShape(QFrame::HLine);
+    line2->setFrameShadow(QFrame::Sunken);
 
     vLayout2->addWidget(m_zoomView,0);
     vLayout2->addSpacing(5);
@@ -441,7 +441,7 @@ void mainwindow::removeImages(const QStringList &fileList)
                 m_calibScene.removeView(fileName);
                 if (m_dispIndex>n)
                     m_dispIndex--;
-                    _msgOut(QString("%1/%2:%3 is removed.").arg(i + 1).arg(imgCnt).arg(fileName));
+                _msgOut(QString("%1/%2:%3 is removed.").arg(i + 1).arg(imgCnt).arg(fileName));
             }
         }
     }
@@ -488,8 +488,8 @@ void importView(
     const bool bGridPts, const bool bRt)
 {
     if (scene == 0 ||
-    fin == NULL ||
-    (!bGridPts && !bRt))
+        fin == NULL ||
+        (!bGridPts && !bRt))
     return;
 
     char fileName[1024];
@@ -508,7 +508,7 @@ void importView(
                 fgets(buff,1024,fin);
         }
         else {
-            _msgOut(QString("Import view info for iamge %1").arg(fileName));
+            _msgOut(QString("Import view info for image %1").arg(fileName));
             if (nx>0 && ny>0 && bGridPts) {
                 std::vector<cv::Point2f> pts;
                 for (int i=0; i<nx*ny; ++i) {
@@ -544,7 +544,7 @@ void exportView(
     if (fout == NULL)
         return;
     QString filename = QFileInfo(view->getFileName()).absoluteFilePath().toLocal8Bit();
-    _msgOut(QString("Export view info for iamge %1").arg(filename));
+    _msgOut(QString("Export view info for image %1").arg(filename));
 
     fprintf(fout,"%s\n", filename);
 
@@ -643,7 +643,7 @@ void mainwindow::exportResults(
         }
     }
     if (!calibFile.isEmpty() && (bGridPts || bGridPts)) {
-        _msgOut(QString("Expport view info to file %1").arg(calibFile));
+        _msgOut(QString("Export view info to file %1").arg(calibFile));
         FILE *fout_calib = 0;
         fopen_s(&fout_calib,calibFile.toLocal8Bit(), "w");
         if (fout_calib == NULL)
@@ -814,10 +814,10 @@ void mainwindow::slotProgressBegin(OpState state)
         m_labelStatus->setText("Exporting...");
         break;
     case Op_Picking:
-        m_labelStatus->setText("Buzy in Corner detection...");
+        m_labelStatus->setText("Busy in Corner detection...");
         break;
     case Op_Calibrating:
-        m_labelStatus->setText("Buzy in Calibration...");
+        m_labelStatus->setText("Busy in Calibration...");
         break;
     case Op_Observing:
     default:

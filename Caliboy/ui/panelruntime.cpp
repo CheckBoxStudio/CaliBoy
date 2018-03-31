@@ -84,20 +84,20 @@ void PanelRuntime::updateCamera(camera *cam)
           "  [--, --, --] ]");
         m_edit_k->setText("[--, --, --, --, --]");
     } else {
-    m_edit_K->setText(QString(
-        "[ [%1, 0.0, %3] \n"
-        "  [0.0, %2, %4] \n"
-        "  [0.0, 0.0, 1.0] ]")
-      .arg(cam->fx).arg(cam->fy)
-      .arg(cam->cx).arg(cam->cy));
+        m_edit_K->setText(QString(
+            "[ [%1, 0.0, %3] \n"
+            "  [0.0, %2, %4] \n"
+            "  [0.0, 0.0, 1.0] ]")
+          .arg(cam->fx).arg(cam->fy)
+          .arg(cam->cx).arg(cam->cy));
 
-    m_edit_k->setText(
-        QString("[%1, %2, %3, %4, %5]")
-        .arg(cam->k[0])
-        .arg(cam->k[1])
-        .arg(cam->k[2])
-        .arg(cam->k[3])
-        .arg(cam->k[4]));
+        m_edit_k->setText(
+            QString("[%1, %2, %3, %4, %5]")
+            .arg(cam->k[0])
+            .arg(cam->k[1])
+            .arg(cam->k[2])
+            .arg(cam->k[3])
+            .arg(cam->k[4]));
     }
 }
 void PanelRuntime::updateCameraView(cameraView *view)

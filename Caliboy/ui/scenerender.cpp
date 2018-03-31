@@ -186,12 +186,12 @@ void SceneRender::drawScene_PlaneFixed()
                 glRotatef(-cv::norm(r)*180.0/CV_PI,r.at<double>(0),r.at<double>(1),r.at<double>(2));
                 glTranslatef(-t.at<double>(0),-t.at<double>(1),-t.at<double>(2));
                 glColor3f(0.0,0.0,0.0);
-                renderText(-15.0,-15.0, 0.0, QString("%1").arg(i+1));// 打标签
-                if (i == m_viewIdx)// 设置颜色
+                renderText(-15.0,-15.0, 0.0, QString("%1").arg(i+1));// Draw label
+                if (i == m_viewIdx)// Set color
                     glColor3f(1.0,0.0,0.0);
                 else
                     glColor3f(1.0,0.0,1.0);
-                drawCamera((m_scene->m_camera.fx+m_scene->m_camera.fy)/2.0 * s,// 画相机
+                drawCamera((m_scene->m_camera.fx+m_scene->m_camera.fy)/2.0 * s,// Draw cameras
                    m_scene->m_camera.cx * s , m_scene->m_camera.cy * s);
 
                 glPopMatrix();
@@ -328,7 +328,7 @@ void SceneRender::wheelEvent(QWheelEvent *e)
     else if (m_fov>90.0)
         m_fov = 90.0;
 #else
-    // Adjst distance between scene and eys.
+    // Adjust distance between scene and observe camera.
     //Scale with projection distortion.
     m_dist += e->delta()/24.0;
 #endif

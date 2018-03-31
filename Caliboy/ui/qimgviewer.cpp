@@ -192,8 +192,8 @@ void QImgViewer::mousePressEvent(QMouseEvent *e)
             vector<cv::Point2f> corners;
             corners.push_back(corner);
             cornerSubPix(m_view->getMatImage(), corners,
-            cvSize(m_winSizw,m_winSizw),cvSize(-1,-1),
-            cvTermCriteria(CV_TERMCRIT_EPS+CV_TERMCRIT_ITER,30,0.1));
+                cvSize(m_winSizw,m_winSizw),cvSize(-1,-1),
+                cvTermCriteria(CV_TERMCRIT_EPS+CV_TERMCRIT_ITER,30,0.1));
             corner = corners.at(0);
             corners.clear();
 
@@ -306,7 +306,7 @@ void QImgViewer::reject()
 void QImgViewer::pickCorners()
 {
     msgOut("\n>> Pick Corners");
-    msgOut(">> Pleace pick 4 inner corners by Left Click (Quit by Right Click) :");
+    msgOut(">> Please pick 4 inner corners by Left Click (Quit by Right Click) :");
     cleanDrawed();
     m_isPicking = true;
     setCursor(Qt::CrossCursor);
@@ -316,7 +316,7 @@ void QImgViewer::setCornerWinSize(int s)
 {
     if (s>2) {
         m_winSizw = s;
-        msgOut(QString(">> Set corner nerborhood windowsize->%1=2x%2+1.").arg(m_winSizw*2+1).arg(m_winSizw));
+        msgOut(QString(">> Set corner neighborhood window size->%1=2x%2+1.").arg(m_winSizw*2+1).arg(m_winSizw));
     }
 }
 void QImgViewer::setBarWinSize(int s)
@@ -358,7 +358,7 @@ void QImgViewer::findGridCorners()
     findUdistortionGridCorners();
 
     msgOut(QString(">> Number of corners: %1 * %2.").arg(m_nX).arg(m_nY));
-    msgOut(QString(">> The estimated focak f: %1 pixels.").arg(m_estFocal));
+    msgOut(QString(">> The estimated focal f: %1 pixels.").arg(m_estFocal));
     emit signalFinished(true);
 }
 void QImgViewer::estFocal()
@@ -399,9 +399,9 @@ void QImgViewer::findUdistortionGridCorners(const double c)
     }
 
     cornerSubPix(
-    m_view->getMatImage(), m_gridCorners, 
-    cvSize(SZ_AUTO_CORNER,SZ_AUTO_CORNER), cvSize(-1,-1), 
-    cvTermCriteria(CV_TERMCRIT_EPS+CV_TERMCRIT_ITER,30,0.1) );
+        m_view->getMatImage(), m_gridCorners, 
+        cvSize(SZ_AUTO_CORNER,SZ_AUTO_CORNER), cvSize(-1,-1), 
+        cvTermCriteria(CV_TERMCRIT_EPS+CV_TERMCRIT_ITER,30,0.1) );
 
     emit signalDrawGridCorners();
 }

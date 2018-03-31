@@ -19,10 +19,12 @@ Q_OBJECT
 public:
     DlgSettingIO(QWidget *parent = 0);
     ~DlgSettingIO();
-    void setParams(const QString cameraFile, const QString calibFile,
-    const bool bGridPts, const bool bRt);
-    void getParams(QString &cameraFile, QString &calibFile,
-    bool &bGridPts, bool &bRt);
+    void setParams(
+        const QString cameraFile, const QString calibFile,
+        const bool bGridPts, const bool bRt);
+    void getParams(
+        QString &cameraFile, QString &calibFile,
+        bool &bGridPts, bool &bRt);
 
     int show_IOSetting();
     int show_Import();

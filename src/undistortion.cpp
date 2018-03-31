@@ -16,7 +16,7 @@
  * |  >> r'             =   r * ( 1 + c * r^2 )
  * |  >> r^3 + (1/c) * r - (1/c) * r' = 0
  * |------------------------------------
- * |  Solve a cubic equation with one unknown, whos quadratic term is 0
+ * |  Solve a cubic equation with one unknown, who's quadratic term is 0
  * |------------------------------------
  * |  x^3 + px + q = 0
  * |  x == r
@@ -34,7 +34,7 @@
  * |  x2    = ...
  * |  x3    = ...
  * |  r     = ( -(p/3)^3 ) ^ (1/2)
- * |  theta = (1/3) * arccos (-q/(2*r))
+ * |  theta = (1/3) * arc_cos (-q/(2*r))
  * |------------------------------------
  */
 void removeDistortion2(std::vector<cv::Point2f> &points, const double c)
@@ -117,6 +117,5 @@ void removeDistortionFast(
         }
         points.at(i).x = p.x;
         points.at(i).y = p.y;
-
     }
 }

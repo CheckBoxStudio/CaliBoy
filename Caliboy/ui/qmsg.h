@@ -25,11 +25,11 @@ public:
     {
         m_Browser = browser;
         connect(this, SIGNAL(AppendText(const QString&)), this, SLOT(SlotAppendText(const QString&)));
-    };
+    }
     void Append(const QString &text)
     {
         emit AppendText(text);
-    };
+    }
 private:
     QTextBrowser *m_Browser;
 private slots:
@@ -41,7 +41,7 @@ private slots:
             m_Browser->moveCursor(QTextCursor::End);
             m_Browser->horizontalScrollBar()->setValue(0);
         }
-    };
+    }
 signals:
     void AppendText(const QString &msg);
 };

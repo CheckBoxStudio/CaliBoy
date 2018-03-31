@@ -40,7 +40,7 @@ public:
         getGridCorners() {return m_gridCorners;}
     int getNX() {return m_nX;}
     int getNY() {return m_nY;}
-        QImage*getImage();
+    QImage*getImage();
 private:
     cameraView *m_view;
 

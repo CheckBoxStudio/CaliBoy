@@ -14,10 +14,10 @@ class DlgSettingCalib : public QDialog
 {
 Q_OBJECT
 private:
-    bool m_estPrincipalPoint;        /* Whether to estmate the principal point. */
-    bool m_estFocalRatio;            /* Whether to estmate the focal ratio.
+    bool m_estPrincipalPoint;        /* Whether to estimate the principal point. */
+    bool m_estFocalRatio;            /* Whether to estimate the focal ratio.
                                         If not, the focal ratio will be set 1. */
-    unsigned int m_estDistMode;      /* Distoration model:
+    unsigned int m_estDistMode;      /* Distortion model:
                                       * [0]: None
                                       * [1]: Only k1
                                       * [2]: Only k1,k2
