@@ -78,9 +78,9 @@ QTableWidgetItem** DlgCheckError::addTableWidgetItem(const int i)
     QTableWidgetItem** items = new QTableWidgetItem*[6];
     items[0] = new QTableWidgetItem(QString("%1").arg(i+1));
     items[1] = new QTableWidgetItem("0x0");
-    items[2] = new QTableWidgetItem("0.000 ¡À 0.000");
-    items[3] = new QTableWidgetItem("0.000 ¡À 0.000");
-    items[4] = new QTableWidgetItem("0.000 ¡À 0.000");
+    items[2] = new QTableWidgetItem(QString::fromLocal8Bit("0.000 ¡À 0.000"));
+    items[3] = new QTableWidgetItem(QString::fromLocal8Bit("0.000 ¡À 0.000"));
+    items[4] = new QTableWidgetItem(QString::fromLocal8Bit("0.000 ¡À 0.000"));
     items[5] = new QTableWidgetItem("--");
 
     for (int ii=0; ii<5; ++ii) {
@@ -194,9 +194,9 @@ void DlgCheckError::calErr(const cameraScene *scene)
             projPts.clear();
 
             items[1]->setText(QString("%1*%2").arg(nx).arg(ny));
-            items[2]->setText(QString("%1 ¡À %2").arg(ux,5,'g',3,'0').arg(dx,5,'g',3,'0'));
-            items[3]->setText(QString("%1 ¡À %2").arg(uy,5,'g',3,'0').arg(dy,5,'g',3,'0'));
-            items[4]->setText(QString("%1 ¡À %2").arg(ud,5,'g',3,'0').arg(dd,5,'g',3,'0'));
+            items[2]->setText(QString::fromLocal8Bit("%1 ¡À %2").arg(ux,5,'g',3,'0').arg(dx,5,'g',3,'0'));
+            items[3]->setText(QString::fromLocal8Bit("%1 ¡À %2").arg(uy,5,'g',3,'0').arg(dy,5,'g',3,'0'));
+            items[4]->setText(QString::fromLocal8Bit("%1 ¡À %2").arg(ud,5,'g',3,'0').arg(dd,5,'g',3,'0'));
         }
         items[5]->setText(view->getFileName());
         delete[] items;
@@ -206,9 +206,9 @@ void DlgCheckError::calErr(const cameraScene *scene)
     myMeanStdDev(totalErr,ux,uy,ud,dx,dy,dd);
     items[0]->setText("Total");
     items[1]->setText(QString("%1").arg(totalErr.size()));
-    items[2]->setText(QString("%1 ¡À %2").arg(ux,5,'g',3,'0').arg(dx,5,'g',3,'0'));
-    items[3]->setText(QString("%1 ¡À %2").arg(uy,5,'g',3,'0').arg(dy,5,'g',3,'0'));
-    items[4]->setText(QString("%1 ¡À %2").arg(ud,5,'g',3,'0').arg(dd,5,'g',3,'0'));
+    items[2]->setText(QString::fromLocal8Bit("%1 ¡À %2").arg(ux,5,'g',3,'0').arg(dx,5,'g',3,'0'));
+    items[3]->setText(QString::fromLocal8Bit("%1 ¡À %2").arg(uy,5,'g',3,'0').arg(dy,5,'g',3,'0'));
+    items[4]->setText(QString::fromLocal8Bit("%1 ¡À %2").arg(ud,5,'g',3,'0').arg(dd,5,'g',3,'0'));
     totalErr.clear();
     delete[] items;
 }
