@@ -15,7 +15,7 @@ PanelResult::PanelResult(cameraScene *calibScene, QWidget *parent)
     , m_showAll(true)
     , m_fixCamera(true)
 {
-    setWindowTitle("Calibraion Result");
+    setWindowTitle("Calibration Result");
     setFeatures(QDockWidget::NoDockWidgetFeatures | QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetClosable);
     setAllowedAreas(Qt::RightDockWidgetArea | Qt::LeftDockWidgetArea);
     setupme();

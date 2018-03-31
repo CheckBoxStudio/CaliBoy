@@ -422,9 +422,9 @@ void mainwindow::updateDisp()
 
         m_panelRuntime->updateCameraView(m_calibScene.m_views.at(m_dispIndex));
         m_panelRuntime->updateCamera(&m_calibScene.m_camera);
-    }
-    m_panelResult->setView(m_dispIndex);
+    } 
     m_panelResult->updateScene(); 
+    m_panelResult->setView(m_dispIndex);
 }
 void mainwindow::removeImages(const QStringList &fileList)
 {
