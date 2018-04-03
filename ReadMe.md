@@ -6,7 +6,7 @@ CaliBoy is a re-implementation of [Camera Calibration Toolbox for Matlab](http:/
 
  Principles and operation details please see our online [documentation](https://checkboxstudio.github.io/CaliBoy/)(in Chinese).
 
- ## Requirements
+ ## Dependencies
 
  + [OpenCV](https://opencv.org/) (our version is 2.4.4)
  + [Qt](https://www.qt.io/) (our version is msvc2015_5.6.1)
